@@ -70,7 +70,7 @@ function axiosISBN(isbn){
 // Get book details based on ISBN
 public_users.get('/isbn/:isbn',function (req, res) { //task 11
     //Write your code here
-    const ISBN = req.params.isbn;
+    const isbn = req.params.isbn;
     axiosISBN(isbn).then(
         (book) => res.send(JSON.stringify(book,null,4)),
         (error) => res.send(error)
